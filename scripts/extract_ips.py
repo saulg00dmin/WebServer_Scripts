@@ -3,7 +3,7 @@ import os
 import re
 from datetime import datetime
 
-# File paths
+# File paths for existing malicious_ips.txt file and new .xlsx file with new ips
 EXCEL_DIR = "/opt/malicious_ips_data/"
 OUTPUT_FILE = "/var/www/html/malicious_ips.txt"
 DATE_TRACK_FILE = "/var/www/html/malicious_ips_dates.txt"
@@ -27,6 +27,7 @@ def load_existing_ips():
 
     return existing_ips
 
+# Get new IPs from the Excel doc located in the /opt/malicious_ips_data directory
 def extract_ips():
     """Extracts unique IPs across all Excel files and ensures no duplicates."""
     existing_ips = load_existing_ips()
