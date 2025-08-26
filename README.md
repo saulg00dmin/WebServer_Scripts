@@ -1,7 +1,10 @@
-<h2>Sripts to help maitain a threat feed web server</h2>
+<h2>Scripts for Maintaining a Threat Feed Web Server</h2>
 
-<h3>Scripts: </h3>
+<h3>Available Scripts</h3>
 
-`extract_ips.py` - extract's all ip's from an excel spreadsheet and adds all the unique ones to a file called malicious_ips.txt and places it in /var/www/html to use in workbook or feed into IDS/IPS.
+<p><code>extract_ips.py</code>  
+Extracts all IP addresses from an Excel spreadsheet and writes only the unique entries to <code>malicious_ips.txt</code> in the Linux web root directory (<code>/var/www/html</code>).  
+This file can then be used to provide an IDS/IPS with an updated threat feed.</p>
 
-`trim_malicious_ips.sh` - trims and removed any IPs older than 30 days from the malicious_ips.txt file in /var/www/html.
+<p><code>trim_malicious_ips.sh</code>  
+Removes any IP addresses older than 30 days from the <code>malicious_ips.txt</code> file in <code>/var/www/html</code>, ensuring the list remains current.</p>
