@@ -1,4 +1,4 @@
-<h2>Populating a threat feed web server</h2>
+<h2>Sripts to help maitain a threat feed web server</h2>
 
 <h3>Scripts: </h3>
 
